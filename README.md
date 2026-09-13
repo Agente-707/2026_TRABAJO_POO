@@ -1,13 +1,13 @@
 # 2026_TRABAJO_POO                  
 
 ## Lista de integrantes: 
- -Ioan Alexander Valenzuela Vasquez
+ - Ioan Alexander Valenzuela Vasquez
 
- -Dire Daniel Espinal Pecho
+ - Dire Daniel Espinal Pecho
 
- -Preston Rodrigo Cordova Bedon
+ - Preston Rodrigo Cordova Bedon
 
- -Luis Augusto Pareja Gavilan
+ - Luis Augusto Pareja Gavilan
 
  - Anthonella Fernanda Vegas Villava
 
