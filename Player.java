@@ -1,32 +1,31 @@
 public class Player extends PJS {
     // Atributos
-    double exp;
-    int lvl;
-    double def;
+    private double exp;
+    private int lvl;
 
     // Constructor
-    public Player(String name, double hp, double atk, double def, double exp, int lvl, boolean isAlive, double cash){  
-        super(hp, atk, name, isAlive, cash); 
+    public Player(String name ,double hp, double atk, double def, double exp, int lvl, boolean isAlive, double cash){  
+        super(name,hp, atk, def, isAlive, cash); 
         this.exp = exp;
         this.lvl = lvl;
-        this.def = def;
     }
     
     // getters
-    double getHp()  {return hp;}
-    double getAtk() {return atk;}
-    double getExp() {return exp;}
-    int    getLvl() {return lvl;}    
-    double getDef() {return def;}
+    public double getHp()  {return hp;}
+    public double getAtk() {return atk;}
+    public double getExp() {return exp;}
+    public int    getLvl() {return lvl;}    
+    public double getDef() {return def;}
 
     // setters
-    void setHp(double hp)   {this.hp = hp;}
-    void setAtk(double atk) {this.atk = atk;}
-    void setExp(double exp) {this.exp = exp;}
-    void setLvl(int lvl)    {this.lvl = lvl;}
-    void getDef(double def) {this.def = def;}
+    public void setHp(double hp)   {this.hp = hp;}
+    public void setAtk(double atk) {this.atk = atk;}
+    public void setExp(double exp) {this.exp = exp;}
+    public void setLvl(int lvl)    {this.lvl = lvl;}
+    public void getDef(double def) {this.def = def;}
 
     // --- Métodos ---
+    @Override     //Resta la vida(hp) con el daño recibido, si hp <= 0 entonces muere el objetivo 
     public void damage(double cant) {
         this.hp -= cant;
         if (this.hp <= 0) {
@@ -38,12 +37,14 @@ public class Player extends PJS {
         System.out.println("Vida restante: " + this.hp);
     }
 
+    @Override     //Al atacar al enemigo, si muere, aparece el mensaje de entidad derrotada
     public void atack(Enemy objetivo) {
         if (!this.isAlive) {
             System.out.println("Entidad derrotada.");
             return;
         }
 
+        //Muestra el nombre de quien lanza y recibe el ataque 
         System.out.println(this.name + " lanza un ataque a " + objetivo.getName());
         objetivo.damage(this.atk);
 

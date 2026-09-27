@@ -1,8 +1,8 @@
 public class NPC extends PJS{
     
     // Constructor
-    public NPC(double hp, double atk, String name, boolean isAlive, double cash){
-        super(hp, atk, name, isAlive, cash);
+    public NPC(String name, double hp, double atk, double def, boolean isAlive, double cash){
+        super(name, hp, atk, def, isAlive, cash);
     }
 
 
