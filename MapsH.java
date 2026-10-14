@@ -1,5 +1,3 @@
-package com.cicloeterno.game ;
-
 import java.util.HashMap;
 import java.util.Map;
 
