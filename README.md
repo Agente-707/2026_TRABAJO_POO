@@ -1,5 +1,8 @@
 # 2026_TRABAJO_POO                  
-
+# Copiladar el framework:
+```bash
+   ./gradlew lwjgl3:run
+```
 ## Lista de integrantes: 
  - Ioan Alexander Valenzuela Vasquez
 
