@@ -52,8 +52,7 @@ public class Player extends PJS implements Combate{
         objetivo.damage(this.atk);  
     }
 
-    @Override //probablemente no se use
-    public void atackPlayer(Player objetivo){}
+    
 
     @Override 
     public void stats(){

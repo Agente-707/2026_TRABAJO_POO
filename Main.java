@@ -20,6 +20,11 @@ public class Main {
         System.out.println(player.hp);
         System.out.println(enemigo.hp);
 
+        Boss boss = new Boss("Dire", 500.0, 500.0, 20.0, 50.0, 20.0, true, 500.0, 100.0);
+        boss.explosion(player, 6.0);
+
+        
+
 
 
     }
