@@ -23,9 +23,13 @@ public class Main {
         Boss boss = new Boss("Dire", 500.0, 500.0, 20.0, 50.0, 20.0, true, 500.0, 100.0);
         boss.explosion(player, 6.0);
 
-        
+        player.atack(boss);
+        player.atack(boss);
+        player.atack(boss);
 
+        boss.heal(); // no se cura aun porque su vida no esta por la mitad
 
+        System.out.println(boss.getHp());
 
     }
 }

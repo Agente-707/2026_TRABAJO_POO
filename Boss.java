@@ -1,4 +1,4 @@
-public class Boss extends PJS{
+public class Boss extends PJS implements Combate{
 
     private double maxHp;
     private double healing;
@@ -38,7 +38,9 @@ public class Boss extends PJS{
                 if(this.hp > this.maxHp){
                     this.hp = this.maxHp;
                     System.out.println("El jefe termino de curarse");
-                }else healthBar();
+                }else{
+                    healthBar();
+                } 
             }
         }
     }
@@ -65,6 +67,18 @@ public class Boss extends PJS{
             System.out.println(objetivo.name + " recibio 25.0 de daño.");
             System.out.println("Vida actual: " + objetivo.hp + " | " + objetivo.getMaxHp());
         }
+    }
+
+    @Override     //Resta la vida(hp) con el daño recibido, si hp <= 0 entonces muere el objetivo
+    public void damage(double cant) {
+        this.hp -= cant;
+        if (this.hp <= 0) {
+            this.hp = 0;
+            this.isAlive = false; 
+        }
+
+        System.out.println(this.name + " recibio " + cant + " de daño.");
+        System.out.println("Vida restante: " + this.hp);
     }
 
 

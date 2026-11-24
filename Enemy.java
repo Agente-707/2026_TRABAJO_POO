@@ -33,8 +33,8 @@ public class Enemy extends PJS implements Combate{
 
     @Override     //Al atacar al jugaddor, si muere, aparece el mensaje de jugador derrotado
     public void atack(Player objetivo) {
-        if (!this.isAlive) {
-            System.out.println("Entidad derrotada.");
+        if (!objetivo.isAlive) {
+            System.out.println(objetivo.getName() + " ha sido derrotado.");
             return;
         }
         atackPlayer(objetivo);
@@ -46,6 +46,4 @@ public class Enemy extends PJS implements Combate{
         objetivo.damage(this.atk);  
     }
 
-    @Override 
-    public void atackEnemy(Enemy objetivo){}
 }
