@@ -45,7 +45,7 @@ public class Boss extends PJS implements Combate{
         }
     }
 
-    public void explosion(Player objetivo, double radio){ // => Ataque en area
+    public void explosion(Player objetivo, double radio){ // => Ataque en area (faltaria implementar las coordenadas del jugador y del jefe para calcular la distancia)
         double radio1 = 5.0, radio2 = 10.0, radio3 = 15.0;
         boolean cerca = false, medio = false, lejos = false;
 
